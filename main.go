@@ -11,7 +11,7 @@ func main() {
 
   r.GET("/", func(c *gin.Context) {
   	host, _ := os.Hostname()
-    c.JSON(http.StatusOK, gin.H{"hostname": host})
+    c.JSON(http.StatusOK, gin.H{"hostname-backend": host})
   })
 
   r.Run()
