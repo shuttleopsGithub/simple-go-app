@@ -14,5 +14,9 @@ func main() {
     c.JSON(http.StatusOK, gin.H{"hostname": host})
   })
 
+  r.GET("/hello", func(c *gin.Context) {
+    c.JSON(http.StatusOK, gin.H{"hello": "world"})
+  })
+
   r.Run()
 }
